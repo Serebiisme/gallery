@@ -26,7 +26,7 @@ function getDefaultModules() {
     loaders: [
       {
         test: /\.css$/,
-        loader: 'style-loader!autoprefixer-loader?{browsers:["last 2 version"]}css-loader'
+        loader: 'style-loader!postcss-loader?{browsers:["last 2 version"]}css-loader'
       },
       {
         test: /\.sass/,
@@ -48,7 +48,7 @@ function getDefaultModules() {
         loader:'json-loader'
       },
       {
-        test: /\.(png|jpg|gif|woff|woff2)$/,
+        test: /\.(png|jpg|gif|woff|woff2|eot)$/,
         loader: 'url-loader?limit=8192'
       },
       {
